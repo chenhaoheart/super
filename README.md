@@ -62,14 +62,14 @@ Spring MVC是一种前端控制器的实现形式，它的基本概念分为静�
 ④最后完成了最终的页面呈现。  
 总结：MVC将业务逻辑和页面实现了分离，其核心就是通过DispatcherServlet实现的。
 动态概念
-①当浏览器的请求Request到达DispatcherServlet。（因为DispatcherServlet也是一个Servlet，所有的Request能够被它拦截到）
-②然后DispatcherServlet会搜索寻找到一个Mapping，也就是HandlerMaping，并将其功能代理给了HandlerMaping。
-③然后HandlerMaping根据本身的配置，找到需要用到的Controller和HandlerInterceptor。
-④然后把Controller和HandlerInterceptor制成一个可执行的链条，也就是Handler/HandlerAdapter的适配器。
-⑤Handler/HandlerAdapter的适配器将信息返回给了DispatcherServlet，DispatcherServlet便开始调用这个一般化的处理器Handler/HandlerAdapter。
-⑥Controller的目的就是生成ModelAndView模型，并且返还给DispatcherServlet。
-⑦DispatcherServlet是不会管理视图显示的，所以它就调用ViewResolver视图解析器并通过该方法返回到View对象。（ViewResolver的作用是告诉DispatcherServlet哪个视图是用来解析当前这种场景的）
-⑧然后ModelAndView将模型数据传递到View，完成了页面呈现。  
+①当浏览器的请求Request到达DispatcherServlet。（因为DispatcherServlet也是一个Servlet，所有的Request能够被它拦截到）  
+②然后DispatcherServlet会搜索寻找到一个Mapping，也就是HandlerMaping，并将其功能代理给了HandlerMaping。  
+③然后HandlerMaping根据本身的配置，找到需要用到的Controller和HandlerInterceptor。  
+④然后把Controller和HandlerInterceptor制成一个可执行的链条，也就是Handler/HandlerAdapter的适配器。  
+⑤Handler/HandlerAdapter的适配器将信息返回给了DispatcherServlet，DispatcherServlet便开始调用这个一般化的处理器Handler/HandlerAdapter。  
+⑥Controller的目的就是生成ModelAndView模型，并且返还给DispatcherServlet。  
+⑦DispatcherServlet是不会管理视图显示的，所以它就调用ViewResolver视图解析器并 通过该方法返回到View对象。（ViewResolver的作用是告诉DispatcherServlet哪个视图是用来解析当前这种场景的）  
+⑧然后ModelAndView将模型数据传递到View，完成了页面呈现。    
 
 3. Spring 框架中都用到了哪些设计模式？
 Spring框架中使用到了大量的设计模式，下面列举了比较有代表性的：
